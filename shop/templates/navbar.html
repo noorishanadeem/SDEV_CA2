@@ -1,0 +1,10 @@
+<nav>
+    <ul>
+        <li><a href = "{% url 'shop:all_products' %}">All Products</a></li>
+        {% for type in links %}
+            <a href = "{{ type.get_absolute_url }}"> {{type.name}}</a>
+            <br>
+        {% endfor %}
+        <li>Your Cart</li>
+    </ul>
+</nav>
