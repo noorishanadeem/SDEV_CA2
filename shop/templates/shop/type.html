@@ -39,19 +39,19 @@
     <br>
     <div>
         <h1 class="text-center my_title">Our Products Collection</h1>
-        <p class="text-justify">Finding the perfect cushion for your room can instantly add to the levels of comfort and
-            sense of style throughout your home. They can transform the blandest of decors instantly
-            by adding colour, softness and an air of cosiness. As well as being comfy and looking great
-            our range of cushions will certainly embolden your décor with personalised charm.</p>
+        <p class="text-justify">Finding the perfect jacket or coat for yourself can be really important so one can express 
+            their personality through the style, material and type they pick. Our company has a wide range of coats and jackets 
+            to match every individuals sense of fashion and aesthetic. Choose from different colours, to different styles, to 
+            different lenghts, to different materials and much more. Get cosy and warm with SIM's Outdoorwear</p>
     </div>
     {% endif %}
-    <div class="container">
-        <div class="row mx-auto">
+    <div>
+        <div>
             {% for product in prods %}
-                <div class="my_bottom_margin col-9 col-lg-4 col-sm-12 col-md-4">
-                    <div class="card text-center" style="min-width:18rem;">
-                        <a class ="img" href="{{product.get_absolute_url}}"><img class="card-img-top my_image"src="{{product.image.url}}" alt="{{product.name}}"></a>
-                        <div class="card-body">
+                <div>
+                    <div>
+                        <a class ="img" href=""><img src="{{product.image.url}}" alt="{{product.name}}"></a>
+                        <div>
                             <h4>{{product.name}}</h4>
                             <p>€{{product.price}}</p>
                         </div>
