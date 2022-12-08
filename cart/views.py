@@ -44,9 +44,6 @@ def cart_detail(request, total=0, counter=0, cart_items = None):
     stripe_total = int(total*100)
     description = 'Online Shop - New Order'
     data_key = settings.STRIPE_PUBLISHABLE_KEY
-
-    return render(request, 'cart.html', {'cart_items':cart_items,
- 'total':total, 'counter':counter, 'data_key':data_key, 'stripe_total':stripe_total, 'description':description})
     
     if request.method=='POST':
         print(request.POST)
@@ -63,13 +60,13 @@ def cart_detail(request, total=0, counter=0, cart_items = None):
             shippingCountry = request.POST['stripeShippingAddressCountryCode']
 
             customer = stripe.Customer.create(email=email, 
-                                            source=token)
+                                                source=token)
 
             stripe.Charge.create(amount=stripe_total, 
-                                currency="eur", 
-                                description=description, 
-                                customer=customer.id)
-            
+                                    currency="eur", 
+                                    description=description, 
+                                    customer=customer.id)
+                
             '''Creating the order'''
             try:
                 order_details = Order.objects.create(
@@ -106,7 +103,8 @@ def cart_detail(request, total=0, counter=0, cart_items = None):
 
         except stripe.error.CardError as e:
             return e
-
+    return render(request, 'cart.html', {'cart_items':cart_items,
+            'total':total, 'counter':counter, 'data_key':data_key, 'stripe_total':stripe_total, 'description':description})
 
 
 def cart_remove(request, product_id):

@@ -1,6 +1,4 @@
 from django.db import models
-
-
 # Create your models here.
 
 class Order(models.Model):
@@ -20,6 +18,7 @@ verbose_name='Email Address')
     shippingCity = models.CharField(max_length=250, blank=True)
     shippingPostcode = models.CharField(max_length=10, blank=True)
     shippingCountry = models.CharField(max_length=200, blank=True)
+    
     class Meta:
         db_table = 'Order'
         ordering = ['-created']
@@ -30,7 +29,8 @@ verbose_name='Email Address')
 class OrderItem(models.Model):
     product = models.CharField(max_length=250)
     quantity = models.IntegerField()
-    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Euro Price')
+    price = models.DecimalField(max_digits=10, decimal_places=2, 
+verbose_name='Euro Price')
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
 
     class Meta:
