@@ -29,6 +29,12 @@
                         <button type="submit" class="btn btn-secondary">Login</button>
                     </form>
                     <br>
+                    <form id="password-reset-form">
+                        <div id="alert"></div>
+                        <button  href="{% url 'signup' %}" type="submit" class="btn btn-secondary">Reset password</button>
+                    </form>
+                    
+                    <br>
                 </div>
                 
             </div>
@@ -37,3 +43,13 @@
     </div>
     <br>
 {% endblock %}
+
+
+
+                      
+<label for="password">Password</label>
+<input type="password" id="password" />
+
+<label for="password-verify">Re-type password</label>
+<input type="password" id="password-verify" />
+

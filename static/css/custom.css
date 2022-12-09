@@ -129,8 +129,10 @@
 	font-size: 12px;
 }
 
-
-
     
-    
+.info-container {
+    background-color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+}
     

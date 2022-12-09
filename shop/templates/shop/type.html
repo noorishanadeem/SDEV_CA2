@@ -51,7 +51,7 @@
                 <p class="card-text">
                   Our company sells all types, colours, length, style and materials of coats and jackets.
                 </p>
-                <a href="#!" class="btn btn-outline-light">Main</a>
+                <a href="{{cat.get_absolute_url}}" class="btn btn-outline-light">Main</a>
               </div>
             </div>
             <!-- Card -->
@@ -70,7 +70,7 @@
                 <p class="card-text">
                   Select from our collection of all types of coats to fit with your aesthetic.
                 </p>
-                <a href="#!" class="btn btn-outline-light">Coats</a>
+                <a href="{{cat.get_absolute_url}}" class="btn btn-outline-light">Coats</a>
               </div>
             </div>
             <!-- Card -->
@@ -89,7 +89,7 @@
                 <p class="card-text">
                   Check out our  wide range of jackets, with every style to match ur fashion.
                 </p>
-                <a href="#!" class="btn btn-outline-light">Jackets</a>
+                <a href="{{cat.get_absolute_url}}" class="btn btn-outline-light">Jackets</a>
               </div>
             </div>
             <!-- Card -->
@@ -99,19 +99,20 @@
 
 
     <br>
-    <div>
+    <div class="info-container">
         <h1 class="text-center my_title">Our Products Collection</h1>
         <p class="text-justify">Finding the perfect jacket or coat for yourself can be really important so one can express 
             their personality through the style, material and type they pick. Our company has a wide range of coats and jackets 
             to match every individuals sense of fashion and aesthetic. Choose from different colours, to different styles, to 
             different lenghts, to different materials and much more. Get cosy and warm with SIM's Outdoorwear</p>
+      <br>
     </div>
     {% endif %}
-    <div>
-        <div>
+    <div class="container">
+        <div class="row mx-auto">
             {% for product in prods %}
-                <div>
-                    <div>
+                <div class="my_bottom_margin col-9 col-lg-4 col-sm-12 col-md-4">
+                    <div class="card text-center" style="min-width:18rem;">
                         <a class ="img" href="{{product.get_absolute_url}}"><img src="{{product.image.url}}" alt="{{product.name}}"></a>
                         <div>
                             <h4>{{product.name}}</h4>
