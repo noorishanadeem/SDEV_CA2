@@ -9,9 +9,9 @@
 {% endblock %}
 {% block title %}
     {% if type %}
-        {{ type.name }} - Perfect Cushion Store
+        {{ type.name }} - SIM'S Outerwear
     {% else %}
-        See Our Outerwear Collection - Perfect Outerwear Store
+        See Our Outerwear Collection - SIM'S Outerwear
     {% endif %}
 {% endblock %}
 {% block content %}
@@ -70,7 +70,7 @@
                 <p class="card-text">
                   Select from our collection of all types of coats to fit with your aesthetic.
                 </p>
-                <a href="{{cat.get_absolute_url}}" class="btn btn-outline-light">Coats</a>
+                <a href="{{product.type.get_url}}" class="btn btn-outline-light">Coats</a>
               </div>
             </div>
             <!-- Card -->
@@ -104,7 +104,7 @@
         <p class="text-justify">Finding the perfect jacket or coat for yourself can be really important so one can express 
             their personality through the style, material and type they pick. Our company has a wide range of coats and jackets 
             to match every individuals sense of fashion and aesthetic. Choose from different colours, to different styles, to 
-            different lenghts, to different materials and much more. Get cosy and warm with SIM's Outdoorwear</p>
+            different lenghts, to different materials and much more. Get cosy and warm with SIM'S Outerwear.</p>
       <br>
     </div>
     {% endif %}
