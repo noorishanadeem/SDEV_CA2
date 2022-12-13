@@ -15,13 +15,14 @@ Noor Isha Nadeem
   products and type models
   search bar and paginator
   added product images
-  order feature
+ payment feature
   sign in, sign up and sign out feature
 
 Moyin Olusona
-  styling
-  payment feature
-  voucher
+  styling the website
+  order feature
+  voucher feature
+  hosted the site live
   
   Web address: X00185164.pythonanywhere.com
 
